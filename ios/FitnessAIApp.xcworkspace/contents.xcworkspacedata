@@ -13,4 +13,13 @@
    <FileRef
       location = "group:AppDelegate 2.m">
    </FileRef>
+   <FileRef
+      location = "group:index.tsx">
+   </FileRef>
+   <FileRef
+      location = "group:app.json">
+   </FileRef>
+   <FileRef
+      location = "group:package.json">
+   </FileRef>
 </Workspace>

@@ -1,24 +1,21 @@
-require_relative '../node_modules/react-native/scripts/react_native_pods'
-require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+platform :ios, '26.0'
 
-platform :ios, '14.0'
+require_relative '../node_modules/react-native/scripts/react_native_pods'
 
 target 'FitnessAIApp' do
   config = use_native_modules!
 
   use_react_native!(
     :path => config[:reactNativePath],
-    :hermes_enabled => true
+    :hermes_enabled => true,
+    :fabric_enabled => true
   )
 
-  post_install do |installer|
-    react_native_post_install(installer)
+  pod 'RNScreens', :path => '../node_modules/react-native-screens'
+  pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-    # Force all pods to iOS 14.0
-    installer.pods_project.targets.each do |target|
-      target.build_configurations.each do |config|
-        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '14.0'
-      end
-    end
+  post_install do |installer|
+    react_native_post_install(installer, :mac_catalyst_enabled => false)
   end
 end

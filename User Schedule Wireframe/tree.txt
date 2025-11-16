@@ -1,0 +1,36 @@
+.
+├── index.html
+├── package.json
+├── README.md
+├── src
+│   ├── App.tsx
+│   ├── Attributions.md
+│   ├── components
+│   │   ├── AIAssistantFullscreen.tsx
+│   │   ├── BottomNavigation.tsx
+│   │   ├── CameraContent.tsx
+│   │   ├── ChangePassword.tsx
+│   │   ├── college_recipt4.pdf
+│   │   ├── figma
+│   │   ├── ForgotPasswordEmail.tsx
+│   │   ├── ForgotPasswordVerify.tsx
+│   │   ├── Header.tsx
+│   │   ├── HomeContent.tsx
+│   │   ├── PaymentScreen.tsx
+│   │   ├── PaymentSuccessScreen.tsx
+│   │   ├── ProfileSheet.tsx
+│   │   ├── ScheduleContent.tsx
+│   │   ├── SubscriptionManagement.tsx
+│   │   ├── SubscriptionScreen.tsx
+│   │   ├── ui
+│   │   └── WelcomeScreen.tsx
+│   ├── guidelines
+│   │   └── Guidelines.md
+│   ├── index.css
+│   ├── main.tsx
+│   └── styles
+│       └── globals.css
+├── tree.txt
+└── vite.config.ts
+
+7 directories, 27 files
