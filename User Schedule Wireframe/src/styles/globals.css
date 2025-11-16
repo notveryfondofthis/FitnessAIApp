@@ -1,0 +1,445 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: linear-gradient(135deg, #a7f3d0 0%, #065f46 100%);
+  --foreground: #000000;
+  --card: rgba(255, 255, 255, 0.1);
+  --card-foreground: #000000;
+  --popover: rgba(255, 255, 255, 0.15);
+  --popover-foreground: #000000;
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(255, 255, 255, 0.2);
+  --secondary-foreground: #000000;
+  --muted: rgba(255, 255, 255, 0.1);
+  --muted-foreground: rgba(0, 0, 0, 0.7);
+  --accent: rgba(0, 0, 0, 0.2);
+  --accent-foreground: #000000;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.3);
+  --input: transparent;
+  --input-background: rgba(255, 255, 255, 0.1);
+  --switch-background: rgba(255, 255, 255, 0.3);
+  --font-weight-medium: 700;
+  --font-weight-normal: 600;
+  --ring: rgba(255, 255, 255, 0.5);
+  --chart-1: #22c55e;
+  --chart-2: #16a34a;
+  --chart-3: #15803d;
+  --chart-4: #166534;
+  --chart-5: #14532d;
+  --radius: 0.625rem;
+  --sidebar: rgba(255, 255, 255, 0.1);
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #000000;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(255, 255, 255, 0.2);
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: rgba(255, 255, 255, 0.2);
+  --sidebar-ring: rgba(255, 255, 255, 0.5);
+}
+
+.dark {
+  --background: linear-gradient(135deg, #065f46 0%, #022c22 100%);
+  --foreground: #000000;
+  --card: rgba(255, 255, 255, 0.05);
+  --card-foreground: #000000;
+  --popover: rgba(255, 255, 255, 0.1);
+  --popover-foreground: #000000;
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(255, 255, 255, 0.1);
+  --secondary-foreground: #000000;
+  --muted: rgba(255, 255, 255, 0.05);
+  --muted-foreground: rgba(0, 0, 0, 0.7);
+  --accent: rgba(0, 0, 0, 0.3);
+  --accent-foreground: #000000;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.4);
+  --input: rgba(255, 255, 255, 0.05);
+  --ring: rgba(255, 255, 255, 0.3);
+  --font-weight-medium: 700;
+  --font-weight-normal: 600;
+  --chart-1: #4ade80;
+  --chart-2: #22c55e;
+  --chart-3: #16a34a;
+  --chart-4: #15803d;
+  --chart-5: #166534;
+  --sidebar: rgba(255, 255, 255, 0.05);
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #000000;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(255, 255, 255, 0.1);
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: rgba(255, 255, 255, 0.3);
+}
+
+.dark-theme {
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: rgba(255, 255, 255, 0.1);
+  --card-foreground: #ffffff;
+  --popover: rgba(255, 255, 255, 0.15);
+  --popover-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #000000;
+  --secondary: rgba(255, 255, 255, 0.2);
+  --secondary-foreground: #ffffff;
+  --muted: rgba(255, 255, 255, 0.1);
+  --muted-foreground: rgba(255, 255, 255, 0.7);
+  --accent: rgba(255, 255, 255, 0.2);
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.3);
+  --input: transparent;
+  --input-background: rgba(255, 255, 255, 0.1);
+  --switch-background: rgba(255, 255, 255, 0.3);
+  --ring: rgba(255, 255, 255, 0.5);
+  --chart-1: #22c55e;
+  --chart-2: #16a34a;
+  --chart-3: #15803d;
+  --chart-4: #166534;
+  --chart-5: #14532d;
+  --sidebar: rgba(255, 255, 255, 0.1);
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: rgba(255, 255, 255, 0.2);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.2);
+  --sidebar-ring: rgba(255, 255, 255, 0.5);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply text-foreground;
+    background: var(--background);
+    min-height: 100vh;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Responsive font sizing for different screen sizes */
+@media (min-width: 640px) {
+  :root {
+    --font-size: 18px;
+  }
+}
+
+/* Hide scrollbars on all tab content */
+.overflow-y-auto {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Enhanced borders for UI components */
+@layer components {
+  [data-slot="card"] {
+    border: 1px solid rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  [data-slot="button"] {
+    border: 1px solid rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  [data-slot="input"] {
+    border: 1px solid rgba(0, 0, 0, 0.4) !important;
+  }
+  
+  [data-slot="badge"] {
+    border: 1px solid rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  [data-slot="progress-indicator"] {
+    border: 1px solid rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  /* Ensure progress components have visible borders */
+  [role="progressbar"] {
+    border: 1px solid rgba(0, 0, 0, 0.3) !important;
+    border-radius: 0.25rem;
+  }
+  
+  /* Header and navigation borders */
+  .border-b {
+    border-bottom-color: rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .border-t {
+    border-top-color: rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  /* Dark theme borders - white outlines */
+  .dark-theme [data-slot="card"] {
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark-theme [data-slot="button"] {
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  .dark-theme [data-slot="input"] {
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  }
+  
+  .dark-theme [data-slot="badge"] {
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  .dark-theme [data-slot="progress-indicator"] {
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  .dark-theme [role="progressbar"] {
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  .dark-theme .border-b {
+    border-bottom-color: rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  .dark-theme .border-t {
+    border-top-color: rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  .dark-theme .border {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  .dark-theme .border-black\/20 {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  
+  .dark-theme .border-black\/30 {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  /* Dark theme header */
+  .dark-theme header h1 {
+    color: #ffffff !important;
+  }
+  
+  .dark-theme header svg {
+    color: #ffffff !important;
+  }
+  
+  .dark-theme [data-slot="avatar-fallback"] {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+  }
+  
+  /* Dark theme bottom navigation */
+  /* Unselected tabs: black background with white text, icons, and outline */
+  .dark-theme nav button[data-variant="ghost"] {
+    background: #000000 !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+  }
+  
+  .dark-theme nav button[data-variant="ghost"] svg {
+    color: #ffffff !important;
+  }
+  
+  .dark-theme nav button[data-variant="ghost"] span {
+    color: #ffffff !important;
+  }
+  
+  /* Selected tabs: white background with black text, icons, and outline */
+  .dark-theme nav button[data-variant="default"] {
+    background: #ffffff !important;
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+  }
+  
+  .dark-theme nav button[data-variant="default"] svg {
+    color: #000000 !important;
+  }
+  
+  .dark-theme nav button[data-variant="default"] span {
+    color: #000000 !important;
+  }
+  
+  /* Dark theme content headings */
+  .dark-theme h2 {
+    color: #ffffff !important;
+  }
+  
+  .dark-theme h3 {
+    color: #ffffff !important;
+  }
+  
+  .dark-theme h4 {
+    color: #ffffff !important;
+  }
+  
+  /* Dark theme profile sheet */
+  .dark-theme [data-slot="sheet-content"] {
+    background: #000000 !important;
+  }
+  
+  .dark-theme [data-slot="sheet-title"] {
+    color: #ffffff !important;
+  }
+  
+  .dark-theme [data-slot="sheet-description"] {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+  
+  /* Dark theme sheet close button - white X icon */
+  .dark-theme [data-slot="sheet-content"] button svg {
+    color: #ffffff !important;
+  }
+  
+  /* Dark theme text colors */
+  .dark-theme p {
+    color: #ffffff !important;
+  }
+  
+  .dark-theme span {
+    color: #ffffff !important;
+  }
+  
+  .dark-theme label {
+    color: #ffffff !important;
+  }
+  
+  /* Dark theme card titles */
+  .dark-theme [data-slot="card-title"] {
+    color: #ffffff !important;
+  }
+  
+  /* Dark theme muted text should be slightly dimmed white */
+  .dark-theme .text-muted-foreground {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+  
+  /* Dark theme badges */
+  .dark-theme .bg-green-500\/20 {
+    background: rgba(34, 197, 94, 0.3) !important;
+    color: #ffffff !important;
+  }
+  
+  .dark-theme .bg-primary\/10 {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+  }
+  
+  .dark-theme .text-primary {
+    color: #ffffff !important;
+  }
+}

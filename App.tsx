@@ -1,45 +1,39 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React, { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { WelcomeScreen } from './src/components/WelcomeScreen';
+import { HomeContent } from './src/components/HomeContent';
+import { ScheduleContent } from './src/components/ScheduleContent';
+import { CameraContent } from './src/components/CameraContent';
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+const Stack = createStackNavigator();
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+export default function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
-    </SafeAreaProvider>
-  );
-}
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
 
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
+  if (!isAuthenticated) {
+    return <WelcomeScreen onLogin={handleLogin} />;
+  }
 
   return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Home" component={HomeContent} />
+        <Stack.Screen name="Schedule" component={ScheduleContent} />
+        <Stack.Screen name="Camera" component={CameraContent} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#ffffff',
   },
 });
-
-export default App;
